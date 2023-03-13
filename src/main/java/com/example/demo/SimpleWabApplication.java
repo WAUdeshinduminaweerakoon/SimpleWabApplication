@@ -11,3 +11,8 @@ public class SimpleWabApplication {
 	}
 
 }
+/*entity
+control
+repo
+service
+ */

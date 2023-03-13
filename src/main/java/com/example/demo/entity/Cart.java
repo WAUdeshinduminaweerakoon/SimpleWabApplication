@@ -1,9 +1,6 @@
 package com.example.demo.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name="Cart")
@@ -11,6 +8,7 @@ import javax.persistence.Table;
 public class Cart {
     @Id
     @Column(name="Cart_Id")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int cartId;
     @Column(name="Product_Name",unique = true)
     private String productName;

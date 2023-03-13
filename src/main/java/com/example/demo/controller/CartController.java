@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+
+
 @RestController
 @RequestMapping(path =  "api/v1/cart")
 
@@ -17,9 +19,10 @@ public class CartController {
 
     @PostMapping(path = "/insert")
     public String insertData(@RequestBody ItemInsertRequestDTO itemInsertRequestDTO){
-        String message = CartService.addItem(itemInsertRequestDTO);
+        String message = cartService.addItem(itemInsertRequestDTO);
         return message;
     }
+
 
 
 }

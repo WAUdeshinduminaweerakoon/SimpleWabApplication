@@ -10,7 +10,7 @@ public class Cart {
     @Column(name="Cart_Id")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int cartId;
-    @Column(name="Product_Name",unique = true)
+    @Column(name="Product_Name",nullable = false)
     private String productName;
     @Column(name="qty",nullable = false)
     private int qty;
